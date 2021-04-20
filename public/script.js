@@ -79,12 +79,12 @@ function setupMode() {
     modeButtons[i].addEventListener("click", function () {
       if (this.textContent === "Easy") {
         numSquares = 3;
-        for (var i = 0; i < modeButtons.length; i++) {
-          modeButtons[i].classList.remove("selected");
-        }
+        modeButtons[1].classList.remove("selected");
+        modeButtons[0].classList.add("selected");
       } else {
         numSquares = 6;
-        this.classList.add("selected");
+        modeButtons[0].classList.remove("selected");
+        modeButtons[1].classList.add("selected");
       }
       reset();
     });
